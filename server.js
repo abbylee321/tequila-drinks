@@ -3,7 +3,8 @@
 // app.get("/", (request, response) => {
 // response.sendStatus(200);
 // });
-app.listen(process.env.PORT);
+// app.listen(process.env.PORT);
+
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
@@ -47,7 +48,7 @@ let tequilaDrinks = drinksObj.drinks;  //this is equal to drinks
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
   });
 
 //request to get the data?
@@ -83,24 +84,6 @@ app.get('/getsugar', (req, res) => {
         res.json(data);
     }); 
 });
-
-// app.get("/drinks", (req, res) => {
-//     const drinks = getDrink();
-//     res.json(drinks);
-//     console.log(drinks);
-// });
-
-
-// app.post('/api', (request, response) => {
-//     console.log('I got a request');
-//     const data = request.body;
-//     const timestamp = Date.now(); 
-//     data.timestamp = timestamp;
-//     //insert data into database.db
-//     database.insert(data);
-//     //send an object back with data 
-//     response.json(data);
-// }); 
 
 app.listen(3000, () => {
     console.log("Server listening on http:localhost:3000")
