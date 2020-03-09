@@ -1,0 +1,14 @@
+{
+    users: [
+        {
+        id: "12312"
+        drink: "tequila"
+        ingredients: "egg white"
+        }
+        {
+        id: "32932"
+        drink: "tequila"
+        ingredients: "tabasco"
+        }
+    ]
+}
